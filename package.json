@@ -1,22 +1,26 @@
 {
-  "name": "kr-helper",
+  "name": "kr-utils",
   "version": "1.0.0",
-  "description": "kory helper",
+  "description": "kory utils",
   "main": "lib/index.ts",
   "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kory-lee/ant-design"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "jest": "jest --config jestconfig.json"
   },
-  "author": "kory-lee <kory.lee@qq.com>",
+  "author": "korylee <kory.lee@qq.com>",
   "license": "MIT",
   "files": [
     "lib",
     "src"
   ],
   "keywords": [
-    "kr-helper"
+    "kory-utils"
   ],
   "devDependencies": {
     "@types/jest": "^27.4.1",
