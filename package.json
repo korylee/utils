@@ -1,5 +1,5 @@
 {
-  "name": "kr-utils",
+  "name": "@korylee/utils",
   "version": "1.0.0",
   "description": "kory utils",
   "main": "lib/index.ts",
