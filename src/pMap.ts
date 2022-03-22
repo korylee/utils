@@ -1,8 +1,6 @@
-import { isFunction } from "./is";
-
 export const pMapSkip = Symbol("skip");
 
-export async function pMap<T extends Promise<any> | any, R extends any>(
+export default async function pMap<T extends Promise<any> | any, R extends any>(
   iterable: Iterable<T>,
   mapper: (item: T, index: number, items: Iterable<T>) => R,
   {
@@ -74,41 +72,4 @@ export async function pMap<T extends Promise<any> | any, R extends any>(
       if (isIterableDone) break;
     }
   });
-}
-
-
-export async function pAll<T extends Promise<any> | any>(
-  iterable:Iterable<T>,
-  {
-    runInFunction = true,
-    concurrency = Number.POSITIVE_INFINITY,
-    stopOnError = true,
-  } = {}
-) {
-  return pMap(
-    iterable,
-    (element) => {
-      if (!runInFunction) return element
-      return isFunction(element) ? element() : element
-    },
-    { concurrency, stopOnError }
-  )
-}
-
-export function awaitTo<T extends any, R extends undefined>(
-  promise: Promise<T>,
-  {
-    errorExt = {},
-    initialValue = undefined,
-  }: {
-    errorExt?: any,
-    initialValue?: R,
-  } = {}
-) {
-  return promise
-    .then((data) => [null, data])
-    .catch((err) => {
-      if (errorExt) Object.assign(err, errorExt)
-      return [err, initialValue]
-    })
 }
