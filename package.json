@@ -1,6 +1,6 @@
 {
   "name": "@korylee/utils",
-  "version": "1.0.2",
+  "version": "0.0.2",
   "description": "kory utils",
   "main": "lib/index.js",
   "module": "lib/index.js",
