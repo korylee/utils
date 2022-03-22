@@ -1,12 +1,13 @@
 {
   "name": "@korylee/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "kory utils",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kory-lee/ant-design"
+    "url": "https://github.com/korylee/kr-utils"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
