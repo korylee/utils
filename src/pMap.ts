@@ -1,6 +1,6 @@
 export const pMapSkip = Symbol("skip");
 
-export default async function pMap<T extends Promise<any> | any, R extends any>(
+export  async function pMap<T extends Promise<any> | any, R extends any>(
   iterable: Iterable<T>,
   mapper: (item: T, index: number, items: Iterable<T>) => R,
   {
@@ -73,3 +73,5 @@ export default async function pMap<T extends Promise<any> | any, R extends any>(
     }
   });
 }
+
+export default pMap;

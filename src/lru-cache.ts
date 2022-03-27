@@ -1,4 +1,4 @@
-export default class LRUCache<T, R> {
+export  class LruCache<T, R> {
   $cache: Map<T, R>
   $capacity: number
 
@@ -25,3 +25,5 @@ export default class LRUCache<T, R> {
     this.$cache.set(key, value)
   }
 }
+
+export default LruCache

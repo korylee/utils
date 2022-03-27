@@ -1,4 +1,4 @@
-export default function awaitTo<T extends any, R extends undefined>(
+export  function awaitTo<T extends any, R extends undefined>(
   promise: Promise<T>,
   {
     errorExt = {},
@@ -15,3 +15,5 @@ export default function awaitTo<T extends any, R extends undefined>(
       return [err, initialValue]
     })
 }
+
+export  default awaitTo
