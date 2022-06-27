@@ -22,9 +22,10 @@
     "url": "https://github.com/korylee/kr-utils"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build && tsc -p tsconfig.build.json",
-    "jest": "jest --config jestconfig.json"
+    "prepublish": "vite build && tsc -p tsconfig.build.json",
+    "jest": "jest --config jestconfig.json",
+    "test": "vitest"
   },
   "author": "korylee <kory.lee@qq.com>",
   "license": "MIT",
@@ -36,12 +37,12 @@
     "kory-utils"
   ],
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@vitest/ui": "^0.16.0",
     "eslint": "^8.11.0",
-    "jest": "^27.5.1",
     "prettier": "^2.6.0",
     "ts-jest": "^27.1.3",
     "typescript": "^4.6.2",
-    "vite": "^2.9.0"
+    "vite": "^2.9.13",
+    "vitest": "^0.16.0"
   }
 }
